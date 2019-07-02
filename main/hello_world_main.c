@@ -11,10 +11,12 @@
 #include "freertos/task.h"
 #include "esp_system.h"
 #include "esp_spi_flash.h"
-
+#include <libwebsockets.h>
 
 void app_main()
 {
+    static struct lws_abs_transport t;
+
     printf("Hello world!\n");
 
     /* Print chip information */
